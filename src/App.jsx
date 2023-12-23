@@ -56,7 +56,10 @@ const App = () => {
     else if ( inputText.includes("thala")){
       newVideoToShow = SuccessDhoni;
     }
-    
+    else if(inputText.length===7){
+      newVideoToShow = SuccessDhoni;
+      relationMessage = `No. of letters in ${inputText} = ${inputText.length}`;
+    }
     else if (/\d/.test(inputText)) {
       const digits = inputText.match(/\d/g);
       const sum = digits.reduce((acc, digit) => acc + parseInt(digit), 0);
@@ -71,7 +74,10 @@ const App = () => {
       } else {
         newVideoToShow = NotMatched;
       }
-    } else {
+    }
+    
+    
+    else {
       newVideoToShow = NotMatched;
     }
 
